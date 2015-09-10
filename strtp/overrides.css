@@ -335,3 +335,14 @@ color: #B72D44;
 
 .facts span {
 }
+
+.hire_form.well {
+  opacity: 0.9;
+}
+.hire_form h4 {
+  margin-top: 0;
+}
+
+.hire_form .btn {
+  background-color: #b72d44;
+}
