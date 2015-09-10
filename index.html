@@ -24,26 +24,38 @@
   <body class="home">
     <div class="page-wrapper">
       <section class="header-10-sub v-center">
-      <div class="background">&nbsp;</div>
-      <div>
+        <div class="background">&nbsp;</div>
+        <div>
         <div class="container">
-          <div class="hero-unit">
-            <h1>Logical Groove</h1>
-            <p>We will <i>work hard</i> on your <i>web</i> and <i>mobile</i> app.</p>
-            <p class="small">Focusing on user experience, simplicity and using the best tools, we minimize your costs and increase your product's success.</p>
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="hero-unit">
+                <h1>Logical Groove</h1>
+                <p>We will <i>work hard</i> on your <i>web</i> and <i>mobile</i> app.</p>
+                <p class="small">Focusing on user experience, simplicity and using the best tools, we minimize your costs and increase your product's success.</p>
+              </div>
             </div>
-          </div>
+            <div class="col-sm-3">
+              <form method="POST" action="https://fwdform.herokuapp.com/user/4f224393-f1c9-4078-aca9-316cbc0ad347" class="hire_form well ">
+                <h4>Hire us</h4>
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="What is your name?">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="email" class="form-control" placeholder="What is your email address?">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" cols="40" rows="5" class="form-control" placeholder="What would you like to hire logicalgroove to do for you?"></textarea>
+                </div>
+                <input type="submit" value="Send Message" class="btn btn-default">
+              </form>
+            </div>
+        </div>
         </div>
         <div class="control-btn fui-arrow-down" href="#"></div>
       </section>
 
       <section class="content-5">
-        <form action="https://fwdform.herokuapp.com/user/<token>">
-          Email: <input type="text" name="name"><br>
-          Name: <input type="text" name="email"><br>
-          Message: <textarea name="message" cols="40" rows="5"></textarea>
-          <input type="submit" value="Send Message">
-        </form>
         <div class="container">
           <img src="images/icon-rocket.png" width="136" height="136" alt="">
           <div class="row">
