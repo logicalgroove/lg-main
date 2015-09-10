@@ -1,4 +1,11 @@
 $(function () {
+
+  $('.hire_form').on('keypress', 'input, textarea', function(){
+    tooltip = $(this).parent().find('.tooltip')
+    tooltip.remove();
+    $(this).parent().removeClass('has-error');
+  });
+
   $('.hire_form').submit(function(event) {
 
     var formData = {
@@ -13,30 +20,50 @@ $(function () {
     }
 
     $('.form-group').removeClass('has-error');
-    formValid = false;
+
+    function isTrue(element, index, array) {
+        return element == true;
+    }
+
+    var formValid = [false, false, false]
 
     if ($('input[name=name]').val() == '') {
       $('input[name=name]').parent().addClass('has-error');
-      formValid = false;
+      $('input[name=name]').tooltip({
+        title: 'Please enter your name',
+        placement: 'left',
+        trigger: 'manual'
+      }).tooltip('show');
+      formValid[0] = false;
     } else {
-      formValid = true;
+      formValid[0] = true;
     }
 
     if ($('input[name=email]').val() != '' && validateEmail(formData['email'])) {
-      formValid = true;
+      formValid[1] = true;
     } else {
       $('input[name=email]').parent().addClass('has-error');
-      formValid = false;
+      $('input[name=email]').tooltip({
+        title: 'Please enter a valid email',
+        placement: 'left',
+        trigger: 'manual'
+      }).tooltip('show');
+      formValid[1] = false;
     }
 
     if ($('textarea[name=message]').val() == '') {
       $('textarea[name=message]').parent().addClass('has-error');
-      formValid = false;
+      $('textarea[name=message]').tooltip({
+        title: 'Please enter your message',
+        placement: 'left',
+        trigger: 'manual'
+      }).tooltip('show');
+      formValid[2] = false;
     } else {
-      formValid = true;
+      formValid[2] = true;
     }
 
-    if (formValid) {
+    if (formValid.every(isTrue)) {
       $.ajax({
         type: 'POST',
         crossDomain: true,
