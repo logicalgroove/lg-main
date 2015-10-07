@@ -1,8 +1,17 @@
-$('body :not(.hire_form) :not(.form-control)').click(function(){
-   $('.hire_form').fadeOut();
-});
-
 $(function () {
+  $('body :not(.hire_form) :not(.form-control)').click(function(e){
+    $('.hire_form').fadeOut(function(){
+      $('.hire_form').remove()
+    });
+    e.preventDefault();
+  });
+
+  function testScroll(ev){
+    if(window.pageYOffset>800) {
+      $('.hire_form').slideDown() }
+  }
+
+  window.onscroll=testScroll
 
   $('.hire_form').on('keypress', 'input, textarea', function(){
     tooltip = $(this).parent().find('.tooltip')
