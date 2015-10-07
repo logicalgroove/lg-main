@@ -1,3 +1,7 @@
+$('body :not(.hire_form) :not(.form-control)').click(function(){
+   $('.hire_form').fadeOut();
+});
+
 $(function () {
 
   $('.hire_form').on('keypress', 'input, textarea', function(){
