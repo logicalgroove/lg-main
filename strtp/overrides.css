@@ -293,7 +293,11 @@ color: #B72D44;
   padding-top: 0;
 }
 
-.jobs .content-31 .container .active h3 {
+.jobs .content-31 .container .active h3{
+  color: #B72D44;
+}
+
+.jobs .content-31 .container .active h5{
   color: #B72D44;
 }
 
