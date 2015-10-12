@@ -336,12 +336,19 @@ color: #B72D44;
 }
 
 .hire_form.well {
-  opacity: 0.8;
-}
+  display: none;
+  z-index: 9000;
+  width: 300px;
+  right: 30px;
+  top: 100px;
+  position: fixed;
+ }
+
 .hire_form h4 {
   margin-top: 0;
 }
 
-.hire_form .btn {
+.hire_form .btn-default{
   background-color: #b72d44;
 }
+
