@@ -332,6 +332,12 @@ color: #B72D44;
   margin-top: -100px;
   right: 40%;
 }
+.works .content-24 .image_fmt {
+  float: right;
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
+}
 
 .works .content-33 blockquote {
   color: #fff;
@@ -360,3 +366,6 @@ color: #B72D44;
   background-color: #b72d44;
 }
 
+.closeme{
+  
+}
