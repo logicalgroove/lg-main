@@ -319,6 +319,10 @@ color: #B72D44;
   background-image: url('../images/twealr-bg.jpg');
   opacity: 1;
 }
+.works .header-10-sub.fmt-bg .background {
+  background-image: url('../images/fmt-bg.jpg');
+  opacity: 1;
+}
 
 .works .header-10-sub h1 {
   font-size: 85px;
@@ -327,6 +331,12 @@ color: #B72D44;
 .works .content-24 .image {
   margin-top: -100px;
   right: 40%;
+}
+.works .content-24 .image_fmt {
+  float: right;
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
 }
 
 .works .content-33 blockquote {
@@ -356,3 +366,6 @@ color: #B72D44;
   background-color: #b72d44;
 }
 
+.closeme{
+  
+}
