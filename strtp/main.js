@@ -1,17 +1,28 @@
 $(function () {
-  $('body :not(.hire_form) :not(.form-control)').click(function(e){
-    $('.hire_form').fadeOut(function(){
-      $('.hire_form').remove()
+    var container = $(".hire_form");
+
+    function hideContainer() {
+      container.fadeOut(function(){
+        container.remove();
+      });
+    }
+
+    $(document).mouseup(function (e) {
+      if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) { // ... nor a descendant of the container
+        hideContainer(); 
+        }
     });
-    e.preventDefault();
-  });
+    $('.closeme').click(function(){
+      hideContainer();
+      return false;
+    })
+    function testScroll(ev){
+      if(window.pageYOffset>800) {
+        $('.hire_form').slideDown() }
+      }
 
-  function testScroll(ev){
-    if(window.pageYOffset>800) {
-      $('.hire_form').slideDown() }
-  }
-
-  window.onscroll=testScroll
+     window.onscroll=testScroll
 
   $('.hire_form').on('keypress', 'input, textarea', function(){
     tooltip = $(this).parent().find('.tooltip')
