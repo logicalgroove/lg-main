@@ -323,6 +323,10 @@ color: #B72D44;
   background-image: url('../images/fmt-bg.jpg');
   opacity: 1;
 }
+.works .header-10-sub.conx-bg .background {
+  background-image: url('../images/bg.jpg');
+  opacity: 1;
+}
 
 .works .header-10-sub h1 {
   font-size: 85px;
