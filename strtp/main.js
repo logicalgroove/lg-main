@@ -1,4 +1,5 @@
 $(function () {
+  new WOW().init();
     var container = $(".hire_form");
 
     function hideContainer() {
