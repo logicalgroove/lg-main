@@ -1,29 +1,35 @@
 $(function () {
   new WOW().init();
-    var container = $(".hire_form");
 
-    function hideContainer() {
-      container.fadeOut(function(){
-        container.remove();
-      });
-    }
+  $('.header-10-sub .background').parallax('20%', 0.3, true)
 
-    $(document).mouseup(function (e) {
-      if (!container.is(e.target) // if the target of the click isn't the container...
-      && container.has(e.target).length === 0) { // ... nor a descendant of the container
-        hideContainer(); 
-        }
+  var container = $(".hire_form");
+
+  function hideContainer() {
+    container.fadeOut(function(){
+      container.remove();
     });
-    $('.closeme').click(function(){
-      hideContainer();
-      return false;
-    })
-    function testScroll(ev){
-      if(window.pageYOffset>800) {
-        $('.hire_form').slideDown() }
-      }
+  }
 
-     window.onscroll=testScroll
+  $(document).mouseup(function (e) {
+    if (!container.is(e.target) // if the target of the click isn't the container...
+    && container.has(e.target).length === 0) { // ... nor a descendant of the container
+      hideContainer();
+    }
+  });
+
+  $('.closeme').click(function(){
+    hideContainer();
+    return false;
+  })
+
+  function testScroll(ev) {
+    if (window.pageYOffset > 800) {
+      $('.hire_form').slideDown()
+    }
+  }
+
+  window.onscroll=testScroll
 
   $('.hire_form').on('keypress', 'input, textarea', function(){
     tooltip = $(this).parent().find('.tooltip')

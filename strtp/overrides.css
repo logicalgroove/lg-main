@@ -15,7 +15,13 @@ section.empty {
   padding: 80px 0;
 }
 
+.invisible {
+  visibility: hidden;
+}
 
+.wow {
+  visibility: hidden;
+}
 
 /*------- Header --------*/
 
@@ -125,6 +131,7 @@ section.empty {
 .project h4 {
   color: #fff;
   margin-top: 40px;
+  font-size: 40px;
 }
 
 .project p {
@@ -240,28 +247,35 @@ section.empty {
 /*------- Footer --------*/
 
 .footer {
-  background: #D8D8D8;
-  color: #4A4A4A;
+  background-color: #111;
+  color: #ccc;
   padding: 40px 0;
 }
+
 .footer .info {
   text-align: right;
-  color: #4A4A4A;
 }
+
 .footer h2 {
   margin-top: 0;
   line-height: 54px;
-  color: #4A4A4A;
+  color: #777;
   font-size: 30px;
 }
 
 .footer a {
-  color: #4A4A4A;
+  color: #ccc;
   font-weight: 300;
 }
+
 .footer a:hover {
-color: #B72D44;
+  color: #B72D44;
 }
+
+.footer .background {
+  background-image: url('../images/bg2.jpg');
+}
+
 
 
 /*------- Jobs --------*/
